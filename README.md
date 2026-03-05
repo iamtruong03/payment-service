@@ -14,10 +14,12 @@
 
 ### 2. Backend (Spring Boot 3)
 - **Framework Lõi:** Java Spring Boot.
-- **Bảo mật (Security):** Spring Security kết hợp JSON Web Token (JWT) để xác thực (Authentication) và phân quyền (Authorization - phân tách `ROLE_USER` và `ROLE_ADMIN`).
+- **Bảo mật (Security):** Spring Security kết hợp JSON Web Token (JWT) để xác thực (Authentication) và phân quyền (Authorization).
 - **Tương tác Cơ sở dữ liệu:** Spring Data JPA / Hibernate.
 - **Cơ sở dữ liệu:** PostgreSQL (Lưu trữ thông tin người dùng, trạng thái giao dịch, logs hệ thống).
+- **Bộ nhớ đệm (Cache & Rate Limiting):** Redis (Dùng để cache và hạn chế số lượng request - chống spam (Rate Limiting)).
 - **Cổng thanh toán:** Stripe Java SDK.
+- **Xử lý sự kiện bất đồng bộ:** Tích hợp Stripe Webhook để nhận và cập nhật trạng thái thanh toán theo thời gian thực (Real-time Payment Status Sync).
 
 ---
 
