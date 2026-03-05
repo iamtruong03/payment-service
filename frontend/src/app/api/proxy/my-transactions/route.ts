@@ -1,0 +1,8 @@
+import { NextResponse } from 'next/server'
+import { fetchWithAuth } from '@/lib/server-api'
+
+export async function GET(req: Request) {
+    const response = await fetchWithAuth(`/api/payment/my-transactions`)
+    const data = await response.json()
+    return NextResponse.json(data, { status: response.status })
+}
